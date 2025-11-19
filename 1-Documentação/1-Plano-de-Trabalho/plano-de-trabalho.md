@@ -69,7 +69,7 @@ O sistema terá como escopo fornecer uma plataforma onde:
 ### **1) Requisitos Funcionais (RF)**  
 O sistema deve permitir:
 
-**RF01.** Cadastrar usuários (empregadores).  
+**RF01.** Cadastrar usuários (candidatos e empregadores).  
 **RF02.** Login e autenticação de usuários.  
 **RF03.** Empregadores cadastrarem vagas com:  
 - título, descrição, requisitos, salário, benefícios, bairro, tipo, link de candidatura
