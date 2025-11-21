@@ -21,8 +21,8 @@ Este documento apresenta as personas principais e suas jornadas dentro do sistem
 ## Jornada do Usuário (Candidato)
 
 ### **Acesso:**
-- Acessa o site pelo celular  
-- Não precisa de cadastro para apenas consultar vagas
+- Acessa o site pelo celular 
+- Cria um cadastro para montar um perfil de candidato (não se cadastrar caso so queira ver vagas)
 
 ---
 
@@ -50,13 +50,22 @@ Este documento apresenta as personas principais e suas jornadas dentro do sistem
 ### 3. **Favoritar vagas** *(se estiver logado)*
 
 ### 4. **Criar Conta (Opcional)**
-- Para salvar vagas e receber notificações opcionais  
+- Para salvar vagas e criar um perfil profissional 
 - Confirmação por email  
 
 ### 5. **Editar Perfil**
 - nome  
 - telefone  
-- interesses profissionais  
+- interesses profissionais
+
+### 6. Criar Perfil Profissional Completo
+- adicionar formação
+- adicionar experiências anteriores
+- habilidades técnicas e comportamentais
+- área de interesse
+- mini-biografia
+- link para portfólio (se houver)
+- WhatsApp e email profissional
 
 ---
 
@@ -114,7 +123,14 @@ Campos:
 - email  
 - whatsapp  
 - endereço (bairro)  
-- breve descrição do negócio  
+- breve descrição do negócio
+
+### 4. Buscar Candidatos
+- acessar módulo exclusivo
+- filtrar por: área profissional, formação, experiência e disponibilidade
+- visualizar lista com perfis
+- abrir perfil completo
+- entrar em contato com o candidato via WhatsApp ou email
 
 ---
 
@@ -157,7 +173,12 @@ Campos:
 - total de vagas  
 - vagas por status  
 - empresas ativas  
-- últimas atividades  
+- últimas atividades
+
+### 4. Moderação de Perfis de Candidatos
+- avaliar perfis antes de liberar para empregadores
+- aprovar, rejeitar ou solicitar ajustes
+- bloquear perfis falsos
 
 ---
 
@@ -175,5 +196,10 @@ Campos:
 | Moderação | — | — | ✔ |
 | Acesso a painel próprio | ✔ (simples) | ✔ (vagas) | ✔ (admin) |
 | Ver links externos para candidatura | ✔ | ✔ | ✔ |
+| Criar perfil profissional | ✔ | — | ✔ (aprova) |
+| Buscar candidatos | — | ✔ | ✔ |
+| Visualizar perfis | — | ✔ | ✔ |
+| Moderação de perfis | — | — | ✔ |
+
 
 
