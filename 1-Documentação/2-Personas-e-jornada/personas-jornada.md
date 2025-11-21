@@ -67,6 +67,12 @@ Este documento apresenta as personas principais e suas jornadas dentro do sistem
 - link para portfólio (se houver)
 - WhatsApp e email profissional
 
+### 7. Denunciar Vagas
+- Em cada vaga haverá um botão “Denunciar”
+- O candidato informa o motivo
+- A denúncia é enviada ao administrador
+
+
 ---
 
 # 2. Persona: Maria – A Empregadora
@@ -105,7 +111,6 @@ Campos:
 - modalidade  
 - contato para candidatura (link externo, WhatsApp, email, formulário)  
 
-*A vaga fica com status “Pendente”.*
 
 ---
 
@@ -132,6 +137,11 @@ Campos:
 - abrir perfil completo
 - entrar em contato com o candidato via WhatsApp ou email
 
+### 5. Denunciar Perfis de Candidatos
+- Pode denunciar perfis suspeitos, incompletos ou falsos
+- O administrador recebe e avalia a denúncia
+
+
 ---
 
 # 3. Persona: Fernanda – A Administradora/Moderadora
@@ -157,17 +167,17 @@ Campos:
 
 ## Funcionalidades do Administrador
 
-### 1. **Aprovar Vagas**
-- Avaliar descrição  
-- Verificar dados de contato  
-- Aprovar ou rejeitar  
-- Enviar email automático explicando motivo da rejeição  
+### 1. Gerenciar Denúncias
+- visualizar todas as denúncias de vagas
+- visualizar denúncias de perfis
+- avaliar a legitimidade da denúncia
+- remover vagas denunciadas
+- suspender perfis falsos
+- bloquear usuários que violem regras  
 
-### 2. **Gerenciar Conteúdo**
-- Editar vagas  
-- Remover vagas suspeitas  
-- Pausar vagas  
-- Bloquear usuários com comportamento inadequado  
+### 2. Gerenciar Conteúdo
+- editar vagas ou perfis quando necessário
+- remover conteúdo inadequado mesmo sem denúncia
 
 ### 3. **Painel de Monitoramento**
 - total de vagas  
@@ -193,13 +203,15 @@ Campos:
 | Cadastrar vaga | — | ✔ | — |
 | Editar vaga | — | ✔ | ✔ |
 | Excluir vaga | — | ✔ | ✔ |
-| Moderação | — | — | ✔ |
+| Receber/Processar denúncias | — | — | ✔ |
 | Acesso a painel próprio | ✔ (simples) | ✔ (vagas) | ✔ (admin) |
 | Ver links externos para candidatura | ✔ | ✔ | ✔ |
 | Criar perfil profissional | ✔ | — | ✔ (aprova) |
 | Buscar candidatos | — | ✔ | ✔ |
 | Visualizar perfis | — | ✔ | ✔ |
 | Moderação de perfis | — | — | ✔ |
+| Denunciar vagas | ✔ | ✔ | — |
+| Denunciar perfis | — | ✔ | — |
 
 
 
