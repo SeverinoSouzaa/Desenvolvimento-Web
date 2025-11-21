@@ -16,7 +16,7 @@
 ## 1.1 Objetivo
 Este documento descreve o plano de trabalho para o desenvolvimento do sistema **Itacoatiara Empregos**, uma plataforma web informativa destinada à divulgação centralizada de vagas de emprego e oportunidades profissionais no município de Itacoatiara – AM.
 
-O sistema tem como objetivo principal **facilitar o acesso às informações de vagas**, permitindo que empregadores publiquem oportunidades e candidatos consultem essas vagas de forma organizada, simples e confiável.
+O sistema tem como objetivo principal **facilitar o acesso às informações de vagas**, permitindo que empregadores publiquem oportunidades e candidatos consultem essas vagas de forma organizada, simples e confiável. Além disso, o sistema passa a oferecer um espaço de perfil profissional para candidatos, permitindo que criem um currículo online completo, visível apenas para empregadores cadastrados. Com isso, empregadores poderão buscar candidatos por área, formação, habilidades e disponibilidade, aumentando a eficiência da contratação no município.
 
 ---
 
@@ -61,6 +61,8 @@ O sistema terá como escopo fornecer uma plataforma onde:
 - Administradores possam revisar e aprovar as vagas;  
 - Candidatos possam acessar e filtrar oportunidades;  
 - Vagas redirecionem os candidatos para o método correto de inscrição informado pelo empregador.
+- Candidatos poderão criar um perfil profissional completo, visível apenas para empregadores autorizados.
+- Empregadores poderão buscar candidatos por filtros específicos (área, experiência, disponibilidade).
 
 ---
 
@@ -90,6 +92,25 @@ O sistema deve permitir:
   
 **RF10.** Sistema de notificações por email (opcional).  
 
+**RF11.** Candidatos podem criar um perfil profissional com:
+- dados pessoais básicos
+- foto opcional
+- habilidades
+- experiências
+- formação acadêmica
+- área de interesse
+- meios de contato (email/WhatsApp profissional)
+
+**RF12.** Empregadores podem acessar um módulo de busca de candidatos.
+
+**RF13.** Empregadores podem filtrar candidatos por:
+- área profissional
+- nível de experiência
+- formação
+- disponibilidade
+
+**RF14.** Sistema de moderação para aprovar perfis suspeitos ou incompletos.
+
 ---
 
 ### **2) Requisitos Não Funcionais (RNF)**
@@ -101,6 +122,8 @@ O sistema deve permitir:
 **RNF05.** O sistema deve possuir desempenho suficiente para carregar vagas rapidamente.  
 **RNF06.** O painel administrativo deve ser acessível apenas por usuários autorizados.  
 **RNF07.** Todas as páginas devem carregar em menos de 2 segundos em ambiente local.  
+**RNF08.** Perfis de candidatos devem ter visibilidade controlada (não públicos).
+**RNF09.** Dados sensíveis devem ser protegidos por autenticação e níveis de permissão.
 
 ---
 
@@ -112,6 +135,9 @@ O sistema deve permitir:
 **RN04.** Empregadores não podem visualizar dados de candidatos pelo sistema.  
 **RN05.** Apenas administradores podem excluir vagas suspeitas.  
 **RN06.** Informações de contato do empregador são obrigatórias.  
+**RN07.** Perfis de candidatos só podem ser visualizados por empregadores cadastrados
+**RN08.** Candidatos não podem enviar mensagens pelo sistema; o contato é sempre externo.
+**RN09.** Perfis com informações falsas ou incompletas serão suspensos pelo moderador.
 
 ---
 
@@ -122,7 +148,9 @@ O sistema deve permitir:
 - Chat entre candidato e empregador;  
 - Algoritmos de recomendação inteligente;  
 - Aplicações mobile nativas;  
-- Integração com APIs externas (LinkedIn, Indeed etc.).  
+- Integração com APIs externas (LinkedIn, Indeed etc.).
+- Sistema não exibirá currículo público; somente empregadores autorizados podem visualizar perfis.
+- Não haverá contato interno entre empresa e candidato (somente WhatsApp/email).
 
 ---
 
@@ -140,7 +168,10 @@ O sistema deve permitir:
 - Ferramenta simples que atende micro e pequenas empresas  
 - Sistema padronizado de apresentação de vagas  
 - Moderação centralizada para reduzir anúncios falsos  
-- Filtros específicos por bairro e perfil local  
+- Filtros específicos por bairro e perfil local
+- Primeiro sistema da cidade que permite empresas buscarem candidatos locais filtrados.
+- Perfis profissionais validados garantem segurança e confiança.
+- Empregadores podem encontrar talentos rapidamente, sem necessidade de grupos ou indicações.
 
 ---
 
