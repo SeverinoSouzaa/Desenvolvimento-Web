@@ -48,7 +48,7 @@ Projeto de software web informativo, com foco em organização, filtragem e exib
 Sistema web responsivo acessível via navegador, utilizando tecnologias compatíveis com desktop e mobile.
 
 ### Tipo
-Aplicação informativa com painel administrativo para moderação de vagas, voltada para fins didáticos e demonstração funcional.
+Aplicação informativa com painel administrativo para gerenciamento e controle de denúncias de vagas e perfis.
 
 ---
 
@@ -58,11 +58,12 @@ Aplicação informativa com painel administrativo para moderação de vagas, vol
 O sistema terá como escopo fornecer uma plataforma onde:
 
 - Empresas possam cadastrar vagas;  
-- Administradores possam revisar e aprovar as vagas;  
 - Candidatos possam acessar e filtrar oportunidades;  
-- Vagas redirecionem os candidatos para o método correto de inscrição informado pelo empregador.
-- Candidatos poderão criar um perfil profissional completo, visível apenas para empregadores autorizados.
-- Empregadores poderão buscar candidatos por filtros específicos (área, experiência, disponibilidade).
+- Vagas sejam publicadas imediatamente, ficando sujeitas a **denúncias** por parte dos usuários;  
+- Administradores recebam e avaliem denúncias de vagas e perfis, podendo removê-los caso sejam falsos, inadequados ou incompletos;  
+- Candidatos possam criar um perfil profissional completo, visível apenas para empregadores autorizados;  
+- Empregadores possam buscar candidatos por filtros específicos (área, formação, habilidades, experiência);  
+- Perfis e vagas denunciados sejam avaliados pelo moderador para manter a confiabilidade da plataforma.
 
 ---
 
@@ -86,8 +87,10 @@ O sistema deve permitir:
 - pausar vagas
    
 **RF09.** Área do administrador para:  
-- aprovar ou rejeitar vagas  
-- modificar ou remover vagas inadequadas  
+- visualizar denúncias de vagas  
+- visualizar denúncias de perfis  
+- remover vagas denunciadas e confirmadas como irregulares  
+- suspender perfis falsos ou incorretos  
 - gerenciar usuários
   
 **RF10.** Sistema de notificações por email (opcional).  
@@ -111,6 +114,12 @@ O sistema deve permitir:
 
 **RF14.** Sistema de moderação para aprovar perfis suspeitos ou incompletos.
 
+**RF15.** Qualquer usuário pode denunciar uma vaga indicando o motivo.  
+
+**RF16.** Apenas empregadores autenticados podem denunciar perfis de candidatos.
+
+**RF17.** Vagas são publicadas imediatamente após o cadastro, ficando sujeitas a denúncias.
+
 ---
 
 ### **2) Requisitos Não Funcionais (RNF)**
@@ -124,20 +133,33 @@ O sistema deve permitir:
 **RNF07.** Todas as páginas devem carregar em menos de 2 segundos em ambiente local.  
 **RNF08.** Perfis de candidatos devem ter visibilidade controlada (não públicos).
 **RNF09.** Dados sensíveis devem ser protegidos por autenticação e níveis de permissão.
+**RNF10.** O sistema deve registrar todas as denúncias com data, autor e motivo.
+**RNF11.** O administrador deve poder avaliar denúncias rapidamente através de um painel simples.
 
 ---
 
-### **3) Regras de Negócio (RN)**
+### 3) Regras de Negócio (RN)
 
-**RN01.** Toda vaga cadastrada deve permanecer “Pendente” até aprovação do administrador.  
-**RN02.** O sistema não realiza candidaturas internas; apenas redireciona o candidato.  
-**RN03.** Vagas com informações incompletas não serão aprovadas.  
-**RN04.** Empregadores não podem visualizar dados de candidatos pelo sistema.  
-**RN05.** Apenas administradores podem excluir vagas suspeitas.  
+**RN01.** Vagas cadastradas são publicadas imediatamente, mas ficam sujeitas à denúncia por qualquer usuário.  
+
+**RN02.** O sistema não realiza candidaturas internas; apenas redireciona para o contato informado pelo empregador.  
+
+**RN03.** Usuários podem denunciar vagas com informações falsas, incompletas, ofensivas ou enganosas.  
+
+**RN04.** Empregadores podem visualizar perfis de candidatos, desde que estejam autenticados.  
+
+**RN05.** Apenas administradores podem excluir vagas denunciadas e confirmadas como suspeitas.  
+
 **RN06.** Informações de contato do empregador são obrigatórias.  
-**RN07.** Perfis de candidatos só podem ser visualizados por empregadores cadastrados
+
+**RN07.** Perfis de candidatos só podem ser visualizados por empregadores autenticados.  
+
 **RN08.** Candidatos não podem enviar mensagens pelo sistema; o contato é sempre externo.
-**RN09.** Perfis com informações falsas ou incompletas serão suspensos pelo moderador.
+
+**RN09.** Perfis de candidatos podem ser denunciados e removidos se forem falsos, incompletos ou violarem políticas do sistema.
+
+**RN10.** Denúncias são anônimas para outros usuários, mas registradas internamente para auditoria.
+
 
 ---
 
@@ -214,9 +236,10 @@ O desenvolvimento seguirá uma abordagem incremental com entregas por ciclos (it
 ---
 
 ## 3.3 Critérios de Aceitação
-- Vaga só aparece ao público após aprovação.  
+- Vagas aparecem imediatamente após serem cadastradas.
+- Vagas podem ser denunciadas e removidas pelo administrador.  
 - Empregador consegue cadastrar, editar, pausar e excluir vagas.  
-- Candidato consegue consultar e acessar links de candidatura.  
+- Candidato consegue consultar, criar/gerenciar um perfil profissional e acessar links de candidatura.  
 - Sistema deve estar funcionando localmente no navegador.  
 
 
