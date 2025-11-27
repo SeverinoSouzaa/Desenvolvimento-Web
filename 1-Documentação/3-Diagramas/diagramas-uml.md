@@ -22,3 +22,7 @@
 
 ### Moderação
 ![Diagrama](https://github.com/user-attachments/assets/07a1128f-94b9-49aa-9584-3669e62b6e33)
+
+
+## Diagrama de Atividade
+![Diagrama](https://github.com/user-attachments/assets/3a2ec039-6bdb-4e5f-bb6c-ad6d48ee2713)
