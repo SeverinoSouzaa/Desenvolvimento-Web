@@ -1,5 +1,6 @@
 ## Diagrama de Classes
-![Diagrama de classes](https://github.com/user-attachments/assets/0700df50-6b37-4538-bedc-b502e9bdca64)
+<img width="8955" height="5545" alt="Diagrama de Classes drawio" src="https://github.com/user-attachments/assets/f21d801d-7ba4-41dc-8103-ca0657a80cb0" />
+
 
 
 ## Diagrama de Caso de Uso
