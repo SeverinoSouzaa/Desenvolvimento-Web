@@ -1,11 +1,24 @@
-## Diagrama de classes
+## Diagrama de Classes
 ![Diagrama de classes](https://github.com/user-attachments/assets/0700df50-6b37-4538-bedc-b502e9bdca64)
 
 
-## Diagrama de caso de uso
+## Diagrama de Caso de Uso
 ![Diagrama de caso de uso](https://github.com/user-attachments/assets/16050b92-2f3a-40dd-a5c6-ab234a180b5d) 
 
 
-## Diagrama de sequência
-![Diagrama de sequência](https://github.com/user-attachments/assets/fb559bf3-8619-48d7-bb2d-a86e5f8b37f0) 
-![Diagrama de sequência](https://github.com/user-attachments/assets/16b9ac71-9a04-4b72-a2ed-71d47803074e) 
+## Diagramas de Sequência
+
+### Autenticação
+![Diagrama](https://github.com/user-attachments/assets/32eae73b-290f-4dfd-bad7-97a92641113c)
+
+### Vagas
+![Diagrama](https://github.com/user-attachments/assets/ad28ad11-12dc-4817-b8ed-a7f4266818f7)
+
+### Perfis
+![Diagrama](https://github.com/user-attachments/assets/45e9529c-dfc9-4f7a-a284-aa04040922c6)
+
+### Denúncias
+![Diagrama](https://github.com/user-attachments/assets/67f9111d-3012-42a3-a808-4e39afe7da14)
+
+### Moderação
+![Diagrama](https://github.com/user-attachments/assets/07a1128f-94b9-49aa-9584-3669e62b6e33)
