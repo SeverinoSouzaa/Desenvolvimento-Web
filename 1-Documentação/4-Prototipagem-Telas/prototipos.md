@@ -6,7 +6,8 @@ Abaixo apresentamos o fluxo visual e as telas principais desenvolvidas para o **
 
 ## Pagina Inicial
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/057c7239-a31a-4f33-a4b7-539bd1b75d40" />
+![WhatsApp Image 2025-12-03 at 19 49 38](https://github.com/user-attachments/assets/4348bcb5-a3b6-40c1-bd79-5c447ef803d4)
+
 
 
 ### Login e Cadastro
