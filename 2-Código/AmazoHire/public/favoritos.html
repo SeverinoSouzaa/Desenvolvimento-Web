@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Vagas Salvas | AmazoHire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="/" style="text-decoration:none; color:inherit;">AmazoHire</a>
+            </div>
+
+            <div class="nav-links">
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <a href="/vagas" class="btn-nav">Voltar</a>
+                    
+                    <a href="/dashboard-candidato" class="btn-nav">Meu Painel</a>
+                    <button onclick="logout()" class="btn-nav">Sair</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <header class="page-header">
+            <h1>Minhas Vagas Salvas</h1>
+            <p>Acompanhe as oportunidades que você marcou como favoritas.</p>
+        </header>
+
+        <div id="listaFavoritos" class="vagas-grid-publica">
+            <p class="loading-text">Carregando...</p>
+        </div>
+    </div>
+
+
+
+<div id="modalVaga" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div class="modal-header">
+                <h2 id="mTitulo">Título</h2>
+                <p id="mEmpresa">Empresa</p>
+                <div class="modal-badges">
+                    <span id="mArea" class="badge">Área</span>
+                    <span id="mTipo" class="badge">Tipo</span>
+                    <span id="mModalidade" class="badge">Local</span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <h3>Descrição</h3>
+                <p id="mDescricao">...</p>
+                <h3>Requisitos</h3>
+                <p id="mRequisitos">...</p>
+                <h3>Salário</h3>
+                <p id="mSalario">...</p>
+            </div>
+
+            <div class="modal-footer">
+                <h3>Como se candidatar:</h3>
+                <div id="areaCandidatura" class="apply-buttons"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/favoritos.js"></script>
+</body>
+</html>

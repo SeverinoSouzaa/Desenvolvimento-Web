@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Vagas | AmazoHire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo"><a href="/" style="text-decoration:none; color:inherit;">AmazoHire</a></div>
+            <div class="nav-links" id="navLinks">
+                <a href="/login" class="btn-login">Login / Cadastrar</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="search-header">
+        <div class="container">
+            <h1>Encontre seu próximo emprego</h1>
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <input type="text" id="campoBusca" placeholder="Pesquise por cargo, empresa...">
+                    <button id="btnBuscar" class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+                
+                <select id="filtroArea">
+                    <option value="">Todas as Áreas</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Vendas">Vendas</option>
+                    <option value="Engenharia">Engenharia</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <div id="listaVagasPublicas" class="vagas-grid-publica">
+            <p class="loading-text">Carregando oportunidades...</p>
+        </div>
+    </div>
+
+    <div id="modalVaga" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div class="modal-header">
+                <h2 id="mTitulo">Título da Vaga</h2>
+                <p id="mEmpresa">Nome da Empresa - Local</p>
+                <div class="modal-badges">
+                    <span id="mArea" class="badge">Área</span>
+                    <span id="mTipo" class="badge">CLT</span>
+                    <span id="mModalidade" class="badge">Remoto</span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <h3>Descrição</h3>
+                <p id="mDescricao">...</p>
+                
+                <h3>Requisitos</h3>
+                <p id="mRequisitos">...</p>
+                
+                <h3>Salário e Benefícios</h3>
+                <p id="mSalario">R$ ---</p>
+            </div>
+
+            <div class="modal-footer">
+                <h3>Como se candidatar:</h3>
+                <div id="areaCandidatura" class="apply-buttons">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vagas.js"></script>
+</body>
+</html>

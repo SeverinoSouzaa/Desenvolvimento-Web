@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Talentos | AmazoHire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        const user = JSON.parse(localStorage.getItem('usuarioAmazoHire'));
+        // Se não tiver logado ou não for Empresa nem Admin, manda embora
+        if (!user || (user.tipo !== 'EMPREGADOR' && user.tipo !== 'ADM')) {
+            alert('Acesso restrito a empresas.');
+            window.location.href = '/login';
+        }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo"><a href="/" style="text-decoration:none; color:inherit;">AmazoHire</a></div>
+            
+            <div class="nav-links">
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <a href="/dashboard-empresa" class="btn-nav">Meu Painel</a>
+                    <button onclick="logout()" class="btn-nav">Sair</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="search-header">
+        <div class="container">
+            <h1>Encontre o talento ideal</h1>
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <input type="text" id="campoBusca" placeholder="Busque por nome, habilidade (ex: Java) ou área...">
+                    <button id="btnBuscar" class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <div id="listaCandidatos" class="vagas-grid-publica">
+            <p class="loading-text">Carregando talentos...</p>
+        </div>
+    </div>
+
+    <div id="modalPerfil" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div class="modal-header-profile">
+                <img src="/img/user-placeholder.png" id="mFoto" class="modal-avatar">
+                <div>
+                    <h2 id="mNome">Nome do Candidato</h2>
+                    <p id="mArea" class="subtitle">Área de Atuação</p>
+                    <p id="mLocal" style="font-size: 0.9rem; color: #666;">Localização</p>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <h3>Sobre</h3>
+                <p id="mBio">...</p>
+                
+                <h3>Habilidades</h3>
+                <div id="mSkills" class="skills-container" style="margin-bottom: 20px;"></div>
+
+                <div class="xp-section">
+                    <h3>Formação</h3>
+                    <p id="mFormacao">...</p>
+                    
+                    <h3>Experiência</h3>
+                    <p id="mXp">...</p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <h3>Entrar em contato:</h3>
+                <div id="areaContato" class="apply-buttons">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/buscar-talentos.js"></script>
+</body>
+</html>
