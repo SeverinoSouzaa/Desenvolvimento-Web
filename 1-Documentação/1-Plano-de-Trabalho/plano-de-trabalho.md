@@ -1,12 +1,12 @@
 # PLANO DE TRABALHO
 
-| **Nome do Projeto** | **Itacoatiara Empregos – Plataforma Local de Oportunidades** |
+| **Nome do Projeto** | **AmazoHire – Plataforma Local de Oportunidades** |
 |---------------------|--------------------------------------------------------------|
-| **Codinome**        | ITEmprega                                                    |
+| **Codinome**        | AmazoHire                                                   |
 | **Versão**          | 1.0                                                          |
 | **Status**          | Em desenvolvimento                                           |
 | **Número de Controle** | 2025-001                                                  |
-| **Executor Principal** | Equipe ITEmprega                                          |
+| **Executor Principal** | Equipe AmazoHire                                          |
 | **Coordenador do Projeto** | Prof. Antonio Alberto                       |
 
 ---
